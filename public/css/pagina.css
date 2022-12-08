@@ -1,0 +1,140 @@
+/* Set a background image by replacing the URL below */
+
+body {
+    background: url('../img/space.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.carousel-item {
+    height: 80vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* Podemos eliminar este estilo si no queremos que se adapte al ancho máximo */
+
+.delimitador {
+    width: 560px;
+    /* Ancho máximo */
+    margin: auto;
+    /* Centramos el vídeo */
+}
+
+
+/* El contenedor con el padding-top crea el tamaño del vídeo */
+
+.contenedor1 {
+    height: 0px;
+    width: 535px;
+    padding-top: 56.25%;
+    /* Relación: 16/9 = 56.25% */
+    position: relative;
+}
+
+
+/* El iframe se adapta al tamaño del contenedor */
+
+.contenedor1 iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* FONT AWESOME & not necessary for functions */
+
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+/*REQUIRED*/
+
+.carousel-row {
+    margin-bottom: 10px;
+}
+
+.slide-row {
+    padding: 0;
+    background-color: #000000;
+    min-height: 200px;
+    border: 1px solid rgb(4, 178, 247);
+    border-radius: 5px;
+    box-shadow: 0 0 20px #4f9;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.slide-carousel {
+    width: 20%;
+    float: left;
+    display: inline-block;
+}
+
+.slide-carousel .carousel-indicators {
+    margin-bottom: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.slide-carousel .carousel-indicators li {
+    border-radius: 0;
+    width: 20px;
+    height: 6px;
+}
+
+.slide-carousel .carousel-indicators .active {
+    margin: 1px;
+}
+
+.slide-content {
+    position: absolute;
+    top: 0;
+    display: block;
+    float: left;
+    width: 100%;
+    max-height: 100%;
+    padding: 1.5% 2% 2% 2%;
+    overflow-y: auto;
+}
+
+.slide-content h4 {
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+
+.slide-footer {
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    width: 98%;
+    height: 22%;
+}
+
+
+/* Scrollbars */
+
+.slide-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.slide-content::-webkit-scrollbar-thumb:vertical {
+    margin: 5px;
+    background-color: rgb(95, 95, 95);
+    -webkit-border-radius: 5px;
+}
+
+.slide-content::-webkit-scrollbar-button:start:decrement,
+.slide-content::-webkit-scrollbar-button:end:increment {
+    height: 0px;
+    display: block;
+}
